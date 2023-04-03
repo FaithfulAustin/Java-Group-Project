@@ -7,7 +7,7 @@ public class view {
 
     public void showMenu(){
 
-
+//Student1321247
         System.out.println("=================================");
         System.out.println("|            (づ ◕‿◕ )づ         |");
         System.out.println("|      CHECKBOOK PROGRAM        |");
@@ -22,6 +22,7 @@ public class view {
         System.out.println("''  2.) Deposit                ''");
         System.out.println("''  3.) Check Balance          ''");
         System.out.println("''  4.) Exit                   ''");
+        System.out.println("''  5.)                        ''");
         System.out.println("''                             ''");
           System.out.print("'' CHOICE = ");
         int input = scanner.nextInt();
@@ -43,6 +44,9 @@ public class view {
         System.out.println("||=============================||");
         System.out.print("'' INPUT AMOUNT = $");
         int input = scanner.nextInt();
+        System.out.println("enter 'y' to confirm the WITHDRAWAL of $"+input+" Press any key to decline");
+        String confirm = scanner.next();
+        if(confirm.equalsIgnoreCase("y")){
         if(controller.withdraw(input)){
             System.out.println("");
             System.out.println("Successful (•‿•)");
@@ -52,6 +56,11 @@ public class view {
             System.err.println("(ᗒᗣᗕ)՞ Insufficient Balance Pls Deposit First");
             deposit();
         }
+
+        }else{
+            showMenu();
+        }
+
     }
     public void deposit(){
         System.out.println("||=============================||");
@@ -59,16 +68,22 @@ public class view {
         System.out.println("||=============================||");
          System.out.print("'' INPUT AMOUNT = $");
         int input = scanner.nextInt();
-
-       if(controller.deposit(input)){
-           System.out.println("");
-           System.out.println("Your money has been deposited successfully (•‿•)");
-           System.out.println("");
-           checkBalance();
+        System.out.println("enter 'y' to confirm the DEPOSIT of $"+input+" Press any key to decline");
+        String confirm = scanner.next();
+        if(confirm.equalsIgnoreCase("y")){
+            if(controller.deposit(input)){
+                System.out.println("");
+                System.out.println("Your money has been deposited successfully (•‿•)");
+                System.out.println("");
+                checkBalance();
+            }else{
+                System.err.println("(ᗒᗣᗕ)՞An error Pls try again");
+                deposit();
+            }
         }else{
-           System.err.println("(ᗒᗣᗕ)՞An error Pls try again");
-           deposit();
-       }
+            showMenu();
+        }
+
 
     }
     public void checkBalance(){
