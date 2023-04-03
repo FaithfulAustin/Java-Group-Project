@@ -22,7 +22,7 @@ public class view {
         System.out.println("''  2.) Deposit                ''");
         System.out.println("''  3.) Check Balance          ''");
         System.out.println("''  4.) Exit                   ''");
-        System.out.println("''  5.)                        ''");
+        System.out.println("''  5.) Our Details            ''");
         System.out.println("''                             ''");
           System.out.print("'' CHOICE = ");
         int input = scanner.nextInt();
@@ -34,6 +34,8 @@ public class view {
             case 3: checkBalance();
             break;
             case 4: System.exit(0);
+            break;
+            case 5 : ourDetails();
         }
     }
 
@@ -92,6 +94,33 @@ public class view {
         System.out.println("||=============================||");
         System.out.println("''                             ''");
         System.out.println("'' $"+controller.checkBalance());
+        System.out.println("enter yes/y to return to the main menu OR any key to exit....");
+        String input = scanner.next();
+        if(input.equalsIgnoreCase("yes")||input.equalsIgnoreCase("y")){
+            showMenu();
+        }else {
+            System.exit(0);
+        }
+
+    }
+
+    public void ourDetails(){
+        System.out.println("||=============================||");
+        System.out.println("||          (๑☆‿ ☆#)ᕗ         ||");
+        System.out.println("||       OUR INFORMATION       ||");
+        System.out.println("||=============================||");
+        System.out.println("''                             ''");
+        System.out.println("'' Full Name: AUSTIN-ILAGHA    ''");
+        System.out.println("'' FAITHFUL                    ''");
+        System.out.println("''                             ''");
+        System.out.println("'' ID: Student1321247          ''");
+        System.out.println("''-----------------------------''");
+        System.out.println("''                             ''");
+        System.out.println("'' Full Name: CYRIL AKPOROBARO ''");
+        System.out.println("'' UGBODUME                    ''");
+        System.out.println("''                             ''");
+        System.out.println("'' ID: Student1321239          ''");
+        System.out.println("''-----------------------------''");
         System.out.println("enter yes/y to return to the main menu OR any key to exit....");
         String input = scanner.next();
         if(input.equalsIgnoreCase("yes")||input.equalsIgnoreCase("y")){
