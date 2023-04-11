@@ -1,7 +1,10 @@
-public class Controller {
 
-    int total_amt =0;
-    public boolean deposit(int amt){
+//CONTROLLER CLASS: Responsible for handling changes in the flow of data
+public class Controller {
+    long total_amt =0;
+
+    //Deposit method for adding the deposited money to the total balance
+    public boolean deposit(long amt){
         boolean isSuccessful =false;
         if(amt>0){
            total_amt= total_amt+amt;
@@ -9,10 +12,13 @@ public class Controller {
         }
         return isSuccessful;
     }
-    public int checkBalance(){
+    //Method for displaying the total balance in the account
+    public long checkBalance(){
        return total_amt;
     }
-    public boolean withdraw(int amt){
+
+    //Withdraw method for removing the withdrawn money from the total balance
+    public boolean withdraw(long amt){
         boolean isSuccessful =false;
         if(amt<total_amt && amt>0){
             total_amt=total_amt-amt;

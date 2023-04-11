@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
+//VIEW CLASS: Responsible for handling the output user sees
 public class View {
             Controller controller = new Controller();
             Scanner scanner = new Scanner(System.in);
             Scanner scanner2 = new Scanner(System.in);
 
+     //The method that displays the different option a user can choose from
     public void showMenu(){
-
-//Student1321247
         System.out.println("=================================");
         System.out.println("|            (づ ◕‿◕ )づ         |");
         System.out.println("|      CHECKBOOK PROGRAM        |");
@@ -39,13 +39,14 @@ public class View {
         }
     }
 
+    //Displays an interface for users to input the amount to withdraw
     public void withdraw(){
 
         System.out.println("||=============================||");
         System.out.println("||            WITHDRAW         ||");
         System.out.println("||=============================||");
         System.out.print("'' INPUT AMOUNT = $");
-        int input = scanner.nextInt();
+        long input = scanner.nextInt();
         System.out.println("enter 'y' to confirm the WITHDRAWAL of $"+input+" Press any key to decline");
         String confirm = scanner.next();
         if(confirm.equalsIgnoreCase("y")){
@@ -64,12 +65,14 @@ public class View {
         }
 
     }
+
+    //Displays an interface for users to input the amount to deposit
     public void deposit(){
         System.out.println("||=============================||");
         System.out.println("||            DEPOSIT          ||");
         System.out.println("||=============================||");
          System.out.print("'' INPUT AMOUNT = $");
-        int input = scanner.nextInt();
+        long input = scanner.nextInt();
         System.out.println("enter 'y' to confirm the DEPOSIT of $"+input+" Press any key to decline");
         String confirm = scanner.next();
         if(confirm.equalsIgnoreCase("y")){
@@ -88,6 +91,8 @@ public class View {
 
 
     }
+
+    //Displays users current balance
     public void checkBalance(){
         System.out.println("||=============================||");
         System.out.println("||            BALANCE          ||");
@@ -104,6 +109,7 @@ public class View {
 
     }
 
+    //Displays the details of the students who participated in the making of this app
     public void ourDetails(){
         System.out.println("||=============================||");
         System.out.println("||                             ||");
