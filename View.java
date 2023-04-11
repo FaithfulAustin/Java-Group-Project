@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class view {
-            controller controller = new controller();
+public class View {
+            Controller controller = new Controller();
             Scanner scanner = new Scanner(System.in);
             Scanner scanner2 = new Scanner(System.in);
 
@@ -79,7 +79,7 @@ public class view {
                 System.out.println("");
                 checkBalance();
             }else{
-                System.err.println("(ᗒᗣᗕ)՞An error Pls try again");
+                System.err.println("(ᗒᗣᗕ)՞Incorrect Input Pls try again");
                 deposit();
             }
         }else{
@@ -106,8 +106,10 @@ public class view {
 
     public void ourDetails(){
         System.out.println("||=============================||");
+        System.out.println("||                             ||");
         System.out.println("||          (๑☆‿ ☆#)ᕗ         ||");
-        System.out.println("||       OUR INFORMATION       ||");
+        System.out.println("||                             ||");
+        System.out.println("||        OUR INFORMATION      ||");
         System.out.println("||=============================||");
         System.out.println("''                             ''");
         System.out.println("'' Full Name: AUSTIN-ILAGHA    ''");
@@ -120,6 +122,12 @@ public class view {
         System.out.println("'' UGBODUME                    ''");
         System.out.println("''                             ''");
         System.out.println("'' ID: Student1321239          ''");
+        System.out.println("''-----------------------------''");
+        System.out.println("''                             ''");
+        System.out.println("'' Full Name: Jedidiah Basil   ''");
+        System.out.println("'' Oton                        ''");
+        System.out.println("''                             ''");
+        System.out.println("'' ID: Student1321249          ''");
         System.out.println("''-----------------------------''");
         System.out.println("enter yes/y to return to the main menu OR any key to exit....");
         String input = scanner.next();

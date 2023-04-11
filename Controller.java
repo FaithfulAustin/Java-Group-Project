@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-
-public class controller {
+public class Controller {
 
     int total_amt =0;
     public boolean deposit(int amt){
@@ -16,7 +14,7 @@ public class controller {
     }
     public boolean withdraw(int amt){
         boolean isSuccessful =false;
-        if(amt<total_amt){
+        if(amt<total_amt && amt>0){
             total_amt=total_amt-amt;
             isSuccessful=true;
 
